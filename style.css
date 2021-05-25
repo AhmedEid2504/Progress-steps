@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'muli',sans-serif;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    
+}
+
+.container {
+   text-align: center;
+    
+}
+
+.progress-container {
+    display:flex;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 350px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.progress-container::before {
+    content: '';
+    background-color: rgb(197, 222, 245);
+    width: 100%;
+    top: 50%;
+    left: 0;
+    height: 4px;
+    position: absolute;
+    transform: translatey(-50%);
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+.progress {
+    background-color: rgb(0, 132, 255);
+    width: 0%;
+    top: 50%;
+    left: 0;
+    height: 4px;
+    position: absolute;
+    transform: translatey(-50%);
+    z-index:-1 ;
+    transition: 0.4s ease;
+}
+
+.circle {
+    border: 4px solid rgb(195, 220, 240);
+    border-radius: 50%;
+    background-color: rgb(252, 252, 252);
+    color: rgb(127, 133, 136);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease;
+}
+
+.circle.active {
+    border-color: rgb(0, 132, 255);
+}
+
+.btn {
+    background-color: rgb(41, 113, 223);
+    color: black;
+    border-radius:8px ;
+    padding: 9px 40px;
+    margin: 5px;
+    cursor: pointer;
+    border: 0;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.btn:disabled {
+    background-color: rgb(127, 133, 136);
+    cursor: not-allowed;
+}
